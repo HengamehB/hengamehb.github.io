@@ -35,26 +35,24 @@
             margin: auto;
             background: white;
             padding: 30px;
-            /* Removed the problematic padding-right: 200px; */
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            /* Removed position: relative; as it's not needed for the float approach */
         }
 
         /* Profile picture + caption */
         .profile-wrapper {
-            /* FIX: Use float instead of absolute positioning */
             float: right;
-            margin-left: 20px; /* Space between picture and text */
-            margin-bottom: 20px; /* Space below the picture */
+            margin-left: 30px; /* Increased space between picture and text */
+            margin-bottom: 20px;
             text-align: center;
-            width: 150px; 
-            /* Removed top and right absolute positioning */
+            /* Increased width */
+            width: 200px; 
         }
         
         .profile-pic {
-            width: 150px;
-            height: 150px;
+            /* Increased width and height */
+            width: 200px; 
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
             border: 4px solid #eee;
@@ -75,7 +73,6 @@
             font-size: 1.1rem;
         }
 
-        /* FIX: Clear the float after the section where the image is present */
         .bio-section::after {
             content: "";
             display: table;
@@ -103,7 +100,8 @@
 
         <h1>Hengameh Bagherian</h1>
 
-        <div class="bio-section"> <h3 id="about">Here is a bit about me:</h3>
+        <div class="bio-section"> 
+            <h3 id="about">Here is a bit about me:</h3>
             <p class="bio">
                 I am a theoretical particle physicist from Iran. I did my undergraduate studies at MIT and got my PhD at Harvard University, 
                 where I worked with Matt Reece as my advisor. As of Sep. 2025, I am an NSF funded postdoctoral researcher at University of Chicago. 
