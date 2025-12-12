@@ -36,30 +36,26 @@
             font-weight: bold;
         }
 
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
         /* NEW: Style for the header image */
+        /* In the <style> block of cv.html */
         .cv-header-image {
-            /* Set max width to make it smaller */
-            width: 100%;                  
-            max-width: 200px;             
+            width: 100%;                  /* Allows it to scale down on small screens */
+            max-width: 200px;             /* NEW: Sets the maximum size */
             height: auto;
             border-radius: 4px;
             margin-bottom: 4px;
-            
-            /* === The Centering Magic === */
-            display: block;              /* Ensures the margins can be applied */
-            margin-left: auto;           /* Pushes the element from the left */
-            margin-right: auto;          /* Pushes the element from the right */
-        }
-
-        /* In the <style> block of cv.html */
-        .cv-header-image {
-            width: 50%;                   /* NEW: Takes up 66% of the container width */
-            height: auto;
-            border-radius: 4px;
-            margin-bottom: 25px;
             display: block;
-            margin-left: auto;            /* Centers the image */
-            margin-right: auto;           /* Centers the image */
+            margin-left: auto;            /* NEW: Centers the image if it's smaller than the container */
+            margin-right: auto;           /* NEW: Centers the image */
         }
 
         h2 { margin-top: 0; }
