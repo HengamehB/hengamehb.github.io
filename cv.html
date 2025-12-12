@@ -31,6 +31,11 @@
         .navbar a:hover {
             border-bottom: 2px solid #333;
         }
+        /* Highlight the current page */
+        .active-link {
+            border-bottom: 2px solid #333;
+            font-weight: bold;
+        }
 
         .container {
             max-width: 700px;
@@ -53,7 +58,12 @@
 <body>
 
     <div class="navbar">
-        <a href="index.html" style="font-weight: bold;">&larr; Back to Home</a>
+        <a href="index.html">Home</a>
+        <a href="cv.html" class="active-link">CV</a>
+        <a href="index.html#highschool">High School</a>
+        <a href="index.html#undergrad">Undergraduate</a>
+        <a href="index.html#phd">PhD Programs</a>
+        <a href="index.html#postdocs">Postdocs</a>
     </div>
 
     <div class="container">
