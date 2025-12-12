@@ -47,14 +47,17 @@
 
         /* NEW: Style for the header image */
         .cv-header-image {
-            width: 100%;                  /* Allows it to scale down on small screens */
-            max-width: 500px;             /* NEW: Sets the maximum size */
+            /* Set max width to make it smaller */
+            width: 100%;                  
+            max-width: 500px;             
             height: auto;
             border-radius: 4px;
             margin-bottom: 25px;
-            display: block;
-            margin-left: auto;            /* NEW: Centers the image if it's smaller than the container */
-            margin-right: auto;           /* NEW: Centers the image */
+            
+            /* === The Centering Magic === */
+            display: block;              /* Ensures the margins can be applied */
+            margin-left: auto;           /* Pushes the element from the left */
+            margin-right: auto;          /* Pushes the element from the right */
         }
 
         h2 { margin-top: 0; }
