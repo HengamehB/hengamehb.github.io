@@ -31,7 +31,6 @@
         .navbar a:hover {
             border-bottom: 2px solid #333;
         }
-        /* Highlight the current page */
         .active-link {
             border-bottom: 2px solid #333;
             font-weight: bold;
@@ -44,6 +43,15 @@
             padding: 30px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* NEW: Style for the header image */
+        .cv-header-image {
+            width: 100%;             /* Makes image span the full width of the container */
+            height: auto;            /* Maintains aspect ratio */
+            border-radius: 4px;      /* Optional: slight rounding of corners */
+            margin-bottom: 25px;     /* Space between image and the title */
+            display: block;
         }
 
         h2 { margin-top: 0; }
@@ -67,6 +75,8 @@
     </div>
 
     <div class="container">
+
+        <img src="header_image.png" alt="Header Image" class="cv-header-image">
 
         <h2>Curriculum Vitae</h2>
 
