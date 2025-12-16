@@ -46,29 +46,38 @@
         }
 
         .header-bg-wrapper {
-            position: relative;    /* Necessary for the absolute positioning inside */
+            /* 1. Apply the GIF background */
+            background-image: url('your-filename.gif'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            /* 2. Sizing and Centering */
             width: 100%;
-            max-width: 600px;      /* Adjust this to fit your container */
-            height: 250px;         /* Fixed height to prevent it from looking too big */
-            margin: 10px auto;
+            max-width: 550px;      /* Slightly wider than the image to create a frame */
+            margin: 20px auto;     /* Centers the wrapper and adds vertical spacing */
+            padding: 20px;         /* This creates the 'border' of GIF around the image */
+            
+            /* 3. Layout */
             display: flex;
             justify-content: center;
             align-items: center;
-            overflow: hidden;      /* Keeps the footprints inside the box */
+            border-radius: 8px;    /* Optional: softens the corners of the GIF area */
         }
-
-        .cv-header-image-inactive {
-            position: relative;
-            z-index: 2;            /* Sits in front of the GIF */
-            width: auto;
-            max-height: 180px;     /* Keeps the map image at a reasonable size */
+        
+        /* Update your existing image class to remove its own margins */
+        .cv-header-image {
+            width: 100%;
+            max-width: 300px;      /* Your desired image size */
             height: auto;
+            border-radius: 4px;
             display: block;
+            margin: 0;             /* Margin is now handled by the wrapper */
         }
 
         /* NEW: Style for the header image */
         /* In the <style> block of cv.html */
-        .cv-header-image {
+        .cv-header-image-inactive {
             width: 100%;                  /* Allows it to scale down on small screens */
             max-width: 300px;             /* NEW: Sets the maximum size */
             height: auto;
